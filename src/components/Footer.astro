@@ -1,5 +1,8 @@
 ---
 import { Image } from "astro:assets";
+import emailIcon from "../assets/email.svg";
+import twitterIcon from "../assets/twitter.svg";
+import githubIcon from "../assets/github.svg";
 ---
 
 <footer class="container flex-row">
@@ -14,7 +17,7 @@ import { Image } from "astro:assets";
     >
       <Image
         class="footer__icon"
-        src="/src/assets/email.svg"
+        src={emailIcon}
         alt="Email"
         width="20"
         height="20"
@@ -24,7 +27,7 @@ import { Image } from "astro:assets";
     <a href="https://x.com/bastnsa" target="_blank" rel="noreferrer noopener">
       <Image
         class="footer__icon"
-        src="/src/assets/twitter.svg"
+        src={twitterIcon}
         alt="Twitter"
         width="20"
         height="20"
@@ -38,7 +41,7 @@ import { Image } from "astro:assets";
     >
       <Image
         class="footer__icon"
-        src="/src/assets/github.svg"
+        src={githubIcon}
         alt="GitHub"
         width="20"
         height="20"
