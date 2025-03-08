@@ -11,7 +11,10 @@ const formattedDate = formatDate(date.toString());
   <div class="note">
     <div class="flex-row">
       <span><em>{`${formattedDate} - ${topic}`}</em></span>
-      <a href={`/notes/${title.toLowerCase().split(" ").join("-")}`} class="note__link">
+      <a
+        href={`/notes/${title.toLowerCase().split(" ").join("-")}`}
+        class="note__link"
+      >
         <Image
           class="note__icon"
           src={readIcon}
