@@ -1,0 +1,23 @@
+---
+import Page from "../layouts/Page.astro";
+
+const title = "Other";
+const subtitle = "A small collection of other endeavors.";
+---
+
+<Page title={title} subtitle={subtitle}>
+  <main class="other">
+    <h2>IN THE WORKS...</h2>
+  </main>
+</Page>
+
+<style>
+  .other {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.25;
+    height: 50vh;
+    color: var(--text-accent);
+  }
+</style>

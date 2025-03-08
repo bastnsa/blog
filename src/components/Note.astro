@@ -1,0 +1,80 @@
+---
+import { formatDate } from "../utils/dates.ts";
+import { Image } from "astro:assets";
+
+const { title, topic, date, image } = Astro.props;
+const formattedDate = formatDate(date.toString());
+---
+
+<div class="note-wrapper">
+  <div class="note">
+    <div class="flex-row">
+      <span><em>{`${formattedDate} - ${topic}`}</em></span>
+      <a
+        href={`notes/${title.toLowerCase().split(" ").join("-")}`}
+        class="note__link"
+      >
+        <Image
+          class="note__icon"
+          src="/src/assets/read.svg"
+          alt="Read"
+          width="20"
+          height="20"
+          loading="lazy"
+        />
+      </a>
+    </div>
+    <h2>{title}</h2>
+    <div class="markdown__content">
+      <slot />
+    </div>
+    {
+      image && (
+        <div class="note__img">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width="100"
+            height="100"
+            loading="eager"
+          />
+        </div>
+      )
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const noteElements = document.querySelectorAll(".note");
+    const noteWrappers = document.querySelectorAll(".note-wrapper");
+
+    noteElements.forEach((note, index) => {
+      const wrapper = noteWrappers[index];
+      const hasOverflow = note.scrollHeight > note.clientHeight;
+
+      if (hasOverflow) {
+        wrapper.classList.add("has-overflow");
+      } else {
+        wrapper.classList.remove("has-overflow");
+      }
+
+      note.addEventListener("scroll", () => {
+        if (note.scrollTop > 10) {
+          wrapper.classList.add("is-scrolled");
+        } else {
+          wrapper.classList.remove("is-scrolled");
+        }
+
+        const atBottom =
+          note.scrollHeight - note.scrollTop - note.clientHeight < 5;
+
+        if (atBottom) {
+          wrapper.classList.add("at-bottom");
+        } else {
+          wrapper.classList.remove("at-bottom");
+        }
+      });
+    });
+  });
+</script>

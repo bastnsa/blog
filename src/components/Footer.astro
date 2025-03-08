@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+---
+
+<footer class="container flex-row">
+  <div class="flex-row">
+    <p>&copy; 2025 Bastian.</p>
+  </div>
+  <div class="flex-row footer__links">
+    <a
+      href="mailto:bastnsa@gmail.com"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <Image
+        class="footer__icon"
+        src="/src/assets/email.svg"
+        alt="Email"
+        width="20"
+        height="20"
+        loading="lazy"
+      />
+    </a>
+    <a href="https://x.com/bastnsa" target="_blank" rel="noreferrer noopener">
+      <Image
+        class="footer__icon"
+        src="/src/assets/twitter.svg"
+        alt="Twitter"
+        width="20"
+        height="20"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://github.com/bastnsa"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <Image
+        class="footer__icon"
+        src="/src/assets/github.svg"
+        alt="GitHub"
+        width="20"
+        height="20"
+        loading="lazy"
+      />
+    </a>
+  </div>
+</footer>

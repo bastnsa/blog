@@ -1,0 +1,69 @@
+---
+import Base from "../layouts/Base.astro";
+import { sortByDate } from "../utils/dates.ts";
+import { formatDate } from "../utils/dates.ts";
+
+interface Frontmatter {
+  title: string;
+  topic: string;
+  date: string;
+}
+
+interface Entry {
+  frontmatter: Frontmatter;
+  url: string;
+}
+
+interface Note {
+  frontmatter: Frontmatter;
+  url: string;
+}
+
+const entries = import.meta.glob("./entries/*.md", { eager: true });
+const entry: Entry = Object.values(entries).sort(sortByDate)[0] as Entry;
+const entryDate = formatDate(entry.frontmatter.date.toString());
+
+const notes = import.meta.glob("./notes/*.md", { eager: true });
+const note: Note = Object.values(notes).sort(sortByDate)[0] as Note;
+const noteDate = formatDate(note.frontmatter.date.toString());
+---
+
+<Base>
+  <main class="container">
+    <section class="preview">
+      <h1>Welcome</h1>
+      <p class="subtitle">
+        I'm a self-taught developer who enjoys learning and creating things.
+        Here I share some thoughts and showcase a little bit of what piques my
+        interest.
+      </p>
+    </section>
+    <hr />
+    <section class="preview">
+      <h3>Currently</h3>
+      <a href="entries/reasons-for-this-site" class="preview__content">
+        <h2>Crafting a Digital Space</h2>
+        <p>Working on creating a space that feels genuine to me.</p>
+        <span>If interested &rarr;</span>
+      </a>
+    </section>
+    <hr />
+    <section class="preview">
+      <h3>Latest Entry</h3>
+      <a href={entry.url} class="preview__content">
+        <h2>{entry.frontmatter.title}</h2>
+        <p class="subtitle">{`${entryDate} - ${entry.frontmatter.topic}`}</p>
+        <span>Continue reading &rarr;</span>
+      </a>
+    </section>
+    <hr />
+    <section class="preview">
+      <h3>Latest Note</h3>
+      <a href="notes" class="preview__content">
+        <h2>{note.frontmatter.title}</h2>
+        <p class="subtitle">{`${noteDate} - ${note.frontmatter.topic}`}</p>
+        <span>Browse notes &rarr;</span>
+      </a>
+    </section>
+  </main>
+</Base>

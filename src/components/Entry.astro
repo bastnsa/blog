@@ -1,0 +1,10 @@
+---
+const { title, topic, url } = Astro.props;
+---
+
+<div class="entry">
+  <a href={url} class="entry__link flex-row">
+    <span class="entry__title">{title}</span>
+    <span class="entry__topic">{topic}</span>
+  </a>
+</div>

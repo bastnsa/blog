@@ -1,0 +1,34 @@
+---
+import Base from "../layouts/Base.astro";
+import Note from "../components/Note.astro";
+import { sortByDate } from "../utils/dates.ts";
+
+const title = "Notes";
+const subtitle = "The more spontaneous log; a catch-all of sorts.";
+const notes = Object.values(import.meta.glob("./notes/*.md", { eager: true }));
+---
+
+<Base title={title}>
+  <main class="container">
+    <article>
+      <header>
+        <h1>{title}</h1>
+        <span class="subtitle">{subtitle}</span>
+      </header>
+      <main class="notes">
+        {
+          notes.sort(sortByDate).map((note: any) => (
+            <Note
+              title={note.frontmatter.title}
+              topic={note.frontmatter.topic}
+              date={note.frontmatter.date}
+              image={note.frontmatter.image}
+            >
+              <Fragment set:html={note.compiledContent()} />
+            </Note>
+          ))
+        }
+      </main>
+    </article>
+  </main>
+</Base>

@@ -1,0 +1,27 @@
+---
+import Page from "../layouts/Page.astro";
+import Entry from "../components/Entry.astro";
+import { sortByDate } from "../utils/dates.ts";
+
+const title = "Entries";
+const subtitle = "I write every day, but publish only ever so often.";
+const entries = Object.values(
+  import.meta.glob("./entries/*.md", { eager: true }),
+);
+---
+
+<Page title={title} subtitle={subtitle}>
+  <main class="entries">
+    {
+      entries
+        .sort(sortByDate)
+        .map((entry: any) => (
+          <Entry
+            title={entry.frontmatter.title}
+            topic={entry.frontmatter.topic}
+            url={entry.url}
+          />
+        ))
+    }
+  </main>
+</Page>
