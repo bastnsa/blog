@@ -372,8 +372,8 @@ pre,
 .markdown__content a:link,
 .markdown__content a:visited {
   white-space: nowrap;
-  position: relative;
-  padding-right: 1.2rem;
+  display: inline-flex;
+  align-items: center;
   color: var(--text-accent);
   transition: var(--transition-normal);
   text-decoration-line: underline;
@@ -383,10 +383,9 @@ pre,
 .markdown__content a:link::after,
 .markdown__content a:visited::after {
   content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 0.2rem;
   width: 1.2rem;
   height: 1.2rem;
   mask-image: url("/src/assets/link.svg");
