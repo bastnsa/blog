@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import rssIcon from "../assets/rss.svg";
 import emailIcon from "../assets/email.svg";
 import twitterIcon from "../assets/twitter.svg";
 import githubIcon from "../assets/github.svg";
@@ -10,20 +11,6 @@ import githubIcon from "../assets/github.svg";
     <p>&copy; 2025 Bastian.</p>
   </div>
   <div class="flex-row footer__links">
-    <a
-      href="mailto:bastnsa@gmail.com"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      <Image
-        class="footer__icon"
-        src={emailIcon}
-        alt="Email"
-        width="20"
-        height="20"
-        loading="lazy"
-      />
-    </a>
     <a href="https://x.com/bastnsa" target="_blank" rel="noreferrer noopener">
       <Image
         class="footer__icon"
@@ -43,6 +30,30 @@ import githubIcon from "../assets/github.svg";
         class="footer__icon"
         src={githubIcon}
         alt="GitHub"
+        width="20"
+        height="20"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="mailto:bastnsa@gmail.com"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <Image
+        class="footer__icon"
+        src={emailIcon}
+        alt="Email"
+        width="20"
+        height="20"
+        loading="lazy"
+      />
+    </a>
+    <a href="/rss.xml" target="_blank" rel="noreferrer noopener">
+      <Image
+        class="footer__icon"
+        src={rssIcon}
+        alt="RSS"
         width="20"
         height="20"
         loading="lazy"

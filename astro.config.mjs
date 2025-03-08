@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
 
 export default defineConfig({
+  site: "https://bastnsa.com",
   markdown: {
     rehypePlugins: [
       [
