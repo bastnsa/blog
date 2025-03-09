@@ -175,7 +175,7 @@ footer p {
 
 .card {
   margin-bottom: 2rem;
-  padding: 1.5rem 1.75rem;
+  padding: 1.75rem 2rem;
   border-radius: 10px;
   border: 1px solid var(--separator);
   transition: var(--transition-normal);
@@ -188,10 +188,6 @@ footer p {
 .card:hover {
   border-color: rgba(153, 153, 153, 0.25);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
-  font-weight: 500;
 }
 
 .card h3 {
@@ -277,14 +273,21 @@ footer p {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-secondary);
+  border: 1px solid var(--separator);
+  transition: var(--transition-normal);
+}
+
+.note-wrapper:hover {
+  border-color: rgba(153, 153, 153, 0.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .note-wrapper:not(:last-child) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .note-wrapper::after {
+  z-index: 3;
   content: "";
   position: absolute;
   bottom: 0;
@@ -293,12 +296,14 @@ footer p {
   height: 4rem;
   background: linear-gradient(
     to bottom,
-    rgba(28, 28, 28, 0),
-    rgba(70, 70, 70, 0.4)
+    transparent,
+    rgba(33, 33, 33, 0.7) 70%,
+    rgba(33, 33, 33, 0.95)
   );
-  z-index: 1;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
   pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .note-wrapper.at-bottom::after {
@@ -306,6 +311,7 @@ footer p {
 }
 
 .note-wrapper::before {
+  z-index: 3;
   content: "";
   position: absolute;
   top: 0;
@@ -314,13 +320,15 @@ footer p {
   height: 4rem;
   background: linear-gradient(
     to top,
-    rgba(28, 28, 28, 0),
-    rgba(70, 70, 70, 0.4)
+    transparent,
+    rgba(33, 33, 33, 0.7) 70%,
+    rgba(33, 33, 33, 0.95)
   );
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
   opacity: 0;
-  z-index: 1;
   pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .note-wrapper.is-scrolled::before {
@@ -331,7 +339,7 @@ footer p {
   font-size: 0.9em;
   height: 100%;
   max-height: 40rem;
-  padding: 2rem 2.25rem;
+  padding: 1.75rem 2rem;
   overflow-y: auto;
   background-color: transparent;
 }
@@ -339,11 +347,14 @@ footer p {
 .note > div > span {
   font-size: 0.9em;
   margin-bottom: 1.5rem;
+  color: var(--text-muted);
 }
 
 .note__link:link,
 .note__link:visited {
+  z-index: 2;
   align-self: flex-start;
+  position: relative;
   transition: var(--transition-normal);
 }
 
@@ -354,6 +365,12 @@ footer p {
 
 .note__icon {
   width: 20px;
+  filter: brightness(1);
+  transition: var(--transition-normal);
+}
+
+.note-wrapper:hover .note__icon {
+  filter: brightness(1.2);
 }
 
 /*******************************

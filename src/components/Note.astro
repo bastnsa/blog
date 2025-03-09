@@ -10,7 +10,7 @@ const formattedDate = formatDate(date.toString());
 <div class="note-wrapper">
   <div class="note">
     <div class="flex-row">
-      <span><em>{`${formattedDate} - ${topic}`}</em></span>
+      <span>{`${formattedDate} - ${topic}`}</span>
       <a
         href={`/notes/${title.toLowerCase().split(" ").join("-")}`}
         class="note__link"
@@ -46,18 +46,20 @@ const formattedDate = formatDate(date.toString());
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  function initNoteFading() {
     const noteElements = document.querySelectorAll(".note");
     const noteWrappers = document.querySelectorAll(".note-wrapper");
 
     noteElements.forEach((note, index) => {
       const wrapper = noteWrappers[index];
-      const hasOverflow = note.scrollHeight > note.clientHeight;
+      const hasOverflow = note.scrollHeight > note.clientHeight + 10;
 
       if (hasOverflow) {
         wrapper.classList.add("has-overflow");
+        wrapper.classList.remove("at-bottom");
       } else {
         wrapper.classList.remove("has-overflow");
+        wrapper.classList.add("at-bottom");
       }
 
       note.addEventListener("scroll", () => {
@@ -67,8 +69,9 @@ const formattedDate = formatDate(date.toString());
           wrapper.classList.remove("is-scrolled");
         }
 
-        const atBottom =
-          note.scrollHeight - note.scrollTop - note.clientHeight < 5;
+        const distanceToBottom =
+          note.scrollHeight - note.scrollTop - note.clientHeight;
+        const atBottom = distanceToBottom < 15;
 
         if (atBottom) {
           wrapper.classList.add("at-bottom");
@@ -77,5 +80,7 @@ const formattedDate = formatDate(date.toString());
         }
       });
     });
-  });
+  }
+
+  document.addEventListener("DOMContentLoaded", initNoteFading);
 </script>
