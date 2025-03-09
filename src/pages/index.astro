@@ -30,40 +30,40 @@ const noteDate = formatDate(note.frontmatter.date.toString());
 
 <Base>
   <main class="container">
-    <section class="preview">
+    <section class="welcome">
       <h1>Welcome</h1>
       <p class="subtitle">
-        I'm a self-taught developer who enjoys learning and creating things.
-        Here I share some thoughts and showcase a little bit of what piques my
-        interest.
+        I'm someone who enjoys learning and creating things. Here I share some
+        thoughts and showcase a little bit of what piques my interest.
       </p>
     </section>
-    <hr />
-    <section class="preview">
-      <h3>Currently</h3>
-      <a href="entries/reasons-for-this-site" class="preview__content">
+    <section class="card">
+      <a href="entries/reasons-for-this-site" class="card__content">
+        <h3>Currently</h3>
         <h2>Crafting a Digital Space</h2>
-        <p>Working on creating a space that feels genuine to me.</p>
-        <span>If interested &rarr;</span>
+        <p class="subtitle">Working on a space that feels genuine to me.</p>
+        <p class="card__cta">If interested &rarr;</p>
       </a>
     </section>
-    <hr />
-    <section class="preview">
-      <h3>Latest Entry</h3>
-      <a href={entry.url} class="preview__content">
+    <section class="card">
+      <a href={entry.url} class="card__content">
+        <h3>Latest Entry</h3>
         <h2>{entry.frontmatter.title}</h2>
         <p class="subtitle">{`${entryDate} - ${entry.frontmatter.topic}`}</p>
-        <span>Continue reading &rarr;</span>
+        <p class="card__cta">Continue reading &rarr;</p>
       </a>
     </section>
-    <hr />
-    <section class="preview">
-      <h3>Latest Note</h3>
-      <a href="notes" class="preview__content">
+    <section class="card">
+      <a href="notes" class="card__content">
+        <h3>Latest Note</h3>
         <h2>{note.frontmatter.title}</h2>
         <p class="subtitle">{`${noteDate} - ${note.frontmatter.topic}`}</p>
-        <span>Browse notes &rarr;</span>
+        <p class="card__cta">Browse notes &rarr;</p>
       </a>
     </section>
+    <p class="subtitle">
+      Feel free to reach out to me if you have any questions or want to chat
+      about literally anything. You can contact me via the links below.
+    </p>
   </main>
 </Base>

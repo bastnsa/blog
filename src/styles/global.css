@@ -5,15 +5,15 @@
 :root {
   --bg-primary: #212121;
   --bg-secondary: rgba(70, 70, 70, 0.4);
-  --bg-secondary-rgb: 28, 28, 28;
+
   --text-normal: #d1d1d1;
   --text-muted: #999999;
   --text-accent: #889eaa;
   --text-inactive: rgba(153, 153, 153, 0.5);
 
-  --separator: rgba(153, 153, 153, 0.1);
-
   --link-hover: hsl(201, 17%, 68%);
+
+  --separator: rgba(153, 153, 153, 0.1);
 
   --transition-normal: all 0.15s ease-in-out;
 }
@@ -169,32 +169,46 @@ footer p {
              HOME
 *******************************/
 
-.preview h2 {
-  font-size: 1.1em;
+.welcome {
+  margin-bottom: 3rem;
+}
+
+.card {
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--separator);
+  transition: var(--transition-normal);
+}
+
+.card:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.card:hover {
+  border-color: rgba(153, 153, 153, 0.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
   font-weight: 500;
-  transition: var(--transition-normal);
 }
 
-.preview h3 {
+.card h3 {
   font-weight: 400;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
   color: var(--text-muted);
 }
 
-.preview__content {
-  font-size: 0.92em;
+.card__content {
+  font-size: 0.9em;
 }
 
-.preview__content > p {
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-}
-
-.preview__content > span {
+.card__cta {
   transition: var(--transition-normal);
 }
 
-.preview__content:hover > span {
+.card__content:hover .card__cta {
   color: var(--text-accent);
 }
 
@@ -452,6 +466,8 @@ body > main {
   width: 91%;
   max-width: 65rem;
 }
+
+/* Removed responsive grid adjustments since we're now using rows */
 
 .flex-col {
   display: flex;

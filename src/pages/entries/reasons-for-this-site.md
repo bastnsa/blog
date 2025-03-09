@@ -26,7 +26,3 @@ I truly believe making a thing, which at first might appear as purely self-indul
 ## Exposure
 
 My aim is to strike a balance—writing what genuinely interests me while remaining open to new insights. The first two reasons are good enough for a "why," but if I'm being honest with myself, making new connections with like-minded people and knowing others find what I publish here interesting can be, in many ways, even more fulfilling. As others have done for me, I hope this site introduces you to new ideas or enables you to find a perspective that helps clarify your own thinking.
-
----
-
-Feel free to reach out to me if you have any questions or want to chat about literally anything. You can contact me via the links below.
