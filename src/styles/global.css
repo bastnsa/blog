@@ -107,24 +107,15 @@ h4 {
   margin-bottom: 6rem;
 }
 
-.nav__home:link .nav__home:visited {
+.nav ul {
+  gap: 1em;
+}
+
+.nav__link:link .nav__link:visited {
   transition: var(--transition-normal);
 }
 
-.nav__home:hover {
-  color: var(--text-accent);
-}
-
-.nav ul {
-  color: var(--text-muted);
-}
-
-.btn {
-  padding: 0.2em 0.55em;
-  transition: all 0.15s ease-in-out;
-}
-
-.btn:hover {
+.nav__link:hover {
   color: var(--text-accent);
 }
 
