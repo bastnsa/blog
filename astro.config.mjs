@@ -4,7 +4,6 @@ import rehypeExternalLinks from "rehype-external-links";
 
 export default defineConfig({
   site: "https://bastnsa.com",
-  transitions: true,
   markdown: {
     rehypePlugins: [
       [

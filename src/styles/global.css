@@ -121,14 +121,11 @@ h4 {
 }
 
 .btn {
-  border-radius: 6px;
   padding: 0.2em 0.55em;
-  background-color: transparent;
   transition: all 0.15s ease-in-out;
 }
 
 .btn:hover {
-  background-color: var(--bg-secondary);
   color: var(--text-accent);
 }
 
@@ -483,8 +480,6 @@ body > main {
   width: 91%;
   max-width: 65rem;
 }
-
-/* Removed responsive grid adjustments since we're now using rows */
 
 .flex-col {
   display: flex;
