@@ -338,7 +338,7 @@ footer p {
 .note {
   font-size: 0.9em;
   height: 100%;
-  max-height: 40rem;
+  max-height: 50rem;
   padding: 1.75rem 2rem;
   overflow-y: auto;
   background-color: transparent;

@@ -1,5 +1,5 @@
 ---
-import Page from "../layouts/Page.astro";
+import Base from "../layouts/Base.astro";
 import Entry from "../components/Entry.astro";
 import { sortByDate } from "../utils/dates.ts";
 
@@ -10,18 +10,26 @@ const entries = Object.values(
 );
 ---
 
-<Page title={title} subtitle={subtitle}>
-  <main class="entries">
-    {
-      entries
-        .sort(sortByDate)
-        .map((entry: any) => (
-          <Entry
-            title={entry.frontmatter.title}
-            topic={entry.frontmatter.topic}
-            url={entry.url}
-          />
-        ))
-    }
+<Base title={title}>
+  <main class="container">
+    <article>
+      <header>
+        <h1>{title}</h1>
+        <span class="subtitle">{subtitle}</span>
+      </header>
+      <main class="entries">
+        {
+          entries
+            .sort(sortByDate)
+            .map((entry: any) => (
+              <Entry
+                title={entry.frontmatter.title}
+                topic={entry.frontmatter.topic}
+                url={entry.url}
+              />
+            ))
+        }
+      </main>
+    </article>
   </main>
-</Page>
+</Base>

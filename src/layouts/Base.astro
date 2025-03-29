@@ -25,7 +25,7 @@ const { title = "Bastian" } = Astro.props;
     <title>{title === "Bastian" ? title : `${title} - Bastian`}</title>
   </head>
   <body>
-    <Header title={title} />
+    <Header />
     <slot />
     <Footer />
   </body>
