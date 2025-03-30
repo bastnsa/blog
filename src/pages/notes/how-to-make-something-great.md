@@ -7,7 +7,7 @@ date: 2025-03-05
 
 Some personal takeaways from [_How to make something great_](https://ryolu.notion.site/how-to-make-something-great) by [Ryo Lu](https://x.com/ryolu_)
 
-> "True greatness emerges not from any single stroke of genius, but from a careful cultivation of potential."
+> True greatness emerges not from any single stroke of genius, but from a careful cultivation of potential.
 
 ---
 
