@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { formatDate } from "../utils/dates.ts";
 import readIcon from "../assets/read.svg";
 
-const { title, topic, date, image } = Astro.props;
+const { title, topic, date } = Astro.props;
 const formattedDate = formatDate(date.toString());
 ---
 
@@ -26,19 +26,6 @@ const formattedDate = formatDate(date.toString());
       </a>
     </div>
     <h2>{title}</h2>
-    {
-      image && (
-        <div class="note__img">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width="100"
-            height="100"
-            loading="eager"
-          />
-        </div>
-      )
-    }
     <div class="markdown__content">
       <slot />
     </div>

@@ -1,6 +1,5 @@
 ---
 import Base from "./Base.astro";
-import { Image } from "astro:assets";
 import { formatDate } from "../utils/dates.ts";
 
 const { frontmatter } = Astro.props;
@@ -15,19 +14,6 @@ const date = formatDate(frontmatter.date.toString());
         <span class="subtitle">{`${date} - ${frontmatter.topic}`}</span>
       </header>
       <main>
-        {
-          frontmatter.image && (
-            <div class="note__img">
-              <Image
-                src={frontmatter.image.src}
-                alt={frontmatter.image.alt}
-                width="100"
-                height="100"
-                loading="eager"
-              />
-            </div>
-          )
-        }
         <div class="markdown__content">
           <slot />
         </div>
