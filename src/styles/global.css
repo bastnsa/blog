@@ -419,13 +419,6 @@ body > main {
   max-width: 65rem;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.8em;
-}
-
 .flex-row {
   display: flex;
   justify-content: space-between;
