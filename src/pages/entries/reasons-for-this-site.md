@@ -19,7 +19,7 @@ As expected, I have read plenty of blog entries and frequently follow some RSS f
     <p>I plan to write an entry that dives into how I've built this site and additions I have in mind, but for now I'll just glance through my immediate idea.</p>
 </div>
 
-The `Entries` page will function like a typical blog in which my main track of writing will be contained. Under `Notes` I'll attempt to partake in actual note-taking, but I'll mostly be jotting down whatever catches my attention. Finally, the `Other` section will serve as a branching-off point to other areas of interest (things like books, music, and even creative pursuits).
+The `Entries` page will function like a typical blog in which my main track of writing will be contained. Under `Notes` I'll attempt to partake in actual note-taking, but I'll mostly be jotting down whatever catches my attention.
 
 I truly believe making a thing, which at first might appear as purely self-indulging, more resourceful is key to ensuring something has the potential to add value to your life. With this in mind, I'm sure this site will function as a dump for whatever writings delight me in the present moment, but at the same time, it will also allow me to look back at previous versions of myself with more clarity.
 

@@ -3,7 +3,7 @@
 *******************************/
 
 :root {
-  --bg-primary: #212121;
+  --bg-primary: #1a1a1a;
   --bg-secondary: rgba(70, 70, 70, 0.4);
 
   --text-normal: #d1d1d1;
@@ -337,8 +337,8 @@ pre,
   margin-bottom: 0;
 }
 
-.markdown__content a:link,
-.markdown__content a:visited {
+p > a:link,
+p > a:visited {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -348,8 +348,8 @@ pre,
   text-decoration-color: rgba(153, 153, 153, 0.25);
 }
 
-.markdown__content a:link::after,
-.markdown__content a:visited::after {
+p > a:link::after,
+p > a:visited::after {
   content: "";
   display: inline-block;
   flex-shrink: 0;
@@ -365,8 +365,8 @@ pre,
   background-color: var(--text-inactive);
 }
 
-.markdown__content a:hover,
-.markdown__content a:active {
+p > a:hover,
+p > a:active {
   color: var(--link-hover);
   text-decoration-thickness: 1.25px;
   text-decoration-color: var(--text-accent);

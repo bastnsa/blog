@@ -33,37 +33,61 @@ const noteDate = formatDate(note.frontmatter.date.toString());
     <section class="welcome">
       <h1>Welcome</h1>
       <p class="subtitle">
-        I'm someone who enjoys learning and creating things. Here I share some
-        thoughts and showcase a little bit of what piques my interest.
+        I'm someone who enjoys learning and building things. Here I share some
+        projects and thoughts and showcase a little bit of what piques my
+        interest.
       </p>
-    </section>
-    <section class="card">
-      <a href="entries/reasons-for-this-site" class="card__content">
-        <h3>Currently</h3>
-        <h2>Crafting a Digital Space</h2>
-        <p class="subtitle">Working on a space that feels genuine to me.</p>
-        <p class="card__cta">If interested &rarr;</p>
-      </a>
+      <hr />
+      <p class="subtitle">
+        These days I immerse myself in exploring the diverse shapes canonical
+        software can take. What I find the most relevant to my interests are
+        <a
+          href="https://malleable.systems"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+          >malleable interfaces
+        </a>
+        within the implementation of
+        <a
+          href="https://www.inkandswitch.com/essay/local-first/"
+          rel="nofollow noopener noreferrer"
+          target="_blank">local-first</a
+        >
+        principles.
+      </p>
     </section>
     <section class="card">
       <a href={entry.url} class="card__content">
         <h3>Latest Entry</h3>
         <h2>{entry.frontmatter.title}</h2>
         <p class="subtitle">{`${entryDate} - ${entry.frontmatter.topic}`}</p>
-        <p class="card__cta">Continue reading &rarr;</p>
+        <p class="card__cta">Continue &rarr;</p>
       </a>
     </section>
     <section class="card">
-      <a href="notes" class="card__content">
+      <a href={note.url} class="card__content">
         <h3>Latest Note</h3>
         <h2>{note.frontmatter.title}</h2>
         <p class="subtitle">{`${noteDate} - ${note.frontmatter.topic}`}</p>
-        <p class="card__cta">Browse notes &rarr;</p>
+        <p class="card__cta">Continue &rarr;</p>
       </a>
     </section>
     <p class="subtitle">
+      I've always been drawn to
+      <a
+        href="https://obsidian.md/about"
+        rel="nofollow noopener noreferrer"
+        target="_blank">software</a
+      >
+      that empowers users with flexibility and control, allowing them to shape their
+      digital tools rather than being constrained by rigid structures. The intersection
+      of adaptable interfaces with local-first architecture creates systems that
+      preserve end-user autonomy while enabling durability and collaboration.
+    </p>
+    <hr />
+    <p class="subtitle">
       Feel free to reach out to me if you have any questions or want to chat
-      about literally anything. You can contact me via the links below.
+      about literally anything. You can reach me via the links below.
     </p>
   </main>
 </Base>
