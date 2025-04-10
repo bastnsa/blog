@@ -6,12 +6,19 @@
   --bg-primary: #1a1a1a;
   --bg-secondary: rgba(70, 70, 70, 0.4);
 
+  --text-heading: #f0f0f0;
   --text-normal: #d1d1d1;
   --text-muted: #999999;
-  --text-accent: #889eaa;
   --text-inactive: rgba(153, 153, 153, 0.5);
 
+  /* blue */
+  --text-accent: #889eaa;
   --link-hover: hsl(201, 17%, 68%);
+  /* red */
+  --text-accent: #b57a7b;
+  --link-hover: hsl(359, 27%, 70%);
+  /* --text-accent: #aa8889; */
+  /* --link-hover: hsl(359, 17%, 68%); */
 
   --separator: rgba(153, 153, 153, 0.1);
 
@@ -37,7 +44,7 @@ body {
   font-size: 1.6rem;
   background-color: var(--bg-primary);
   color: var(--text-normal);
-  line-height: 1.5;
+  line-height: 1.55;
   padding-bottom: 5rem;
 }
 
@@ -49,11 +56,13 @@ a:visited {
 
 nav ul {
   list-style: none;
+  color: var(--text-normal);
 }
 
 ol,
 ul {
   list-style-position: inside;
+  color: var(--text-muted);
 }
 
 img {
@@ -69,9 +78,15 @@ span {
          GENERAL TEXT
 *******************************/
 
+h1,
+h2,
+h3 {
+  color: var(--text-heading);
+}
+
 h1 {
-  font-weight: 700;
   font-size: 1.6em;
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
@@ -175,7 +190,6 @@ footer p {
 
 .card:hover {
   border-color: rgba(153, 153, 153, 0.25);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -265,7 +279,6 @@ footer p {
 
 .note-wrapper:hover {
   border-color: rgba(153, 153, 153, 0.25);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .note-wrapper:not(:last-child) {
@@ -323,7 +336,6 @@ pre,
 .markdown__content > ol,
 .markdown__content > ul,
 .markdown__content > p {
-  color: var(--text-muted);
   margin-bottom: 1.4em;
 }
 
@@ -375,6 +387,7 @@ p > a:active {
 blockquote {
   font-size: 0.9em;
   padding-left: 1.75rem;
+  color: var(--text-muted);
   border-left: 1.5px solid var(--text-inactive);
 }
 
@@ -386,7 +399,7 @@ p code {
   font-size: 0.9em;
   white-space: nowrap;
   padding: 0.15rem 0.45rem;
-  color: var(--text-normal);
+  color: var(--text-heading);
   background-color: var(--bg-secondary);
 }
 
