@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Note.astro"
 title: "Doing With Images Makes Symbols"
-topic: "Interface"
+topic: "Interfaces"
 date: 2025-03-30
 ---
 

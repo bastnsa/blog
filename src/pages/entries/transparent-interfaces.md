@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Entry.astro"
 title: "Transparent Interfaces"
-topic: "Design"
+topic: "Interfaces"
 date: 2025-04-06
 ---
 
