@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Note.astro"
+layout: "../../layouts/Content.astro"
 title: "Connecting Apps"
 topic: "Malleable Software"
 date: 2025-04-27

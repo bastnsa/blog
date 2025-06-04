@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Note.astro"
+layout: "../../layouts/Content.astro"
 title: "Doing With Images Makes Symbols"
 topic: "Interfaces"
 date: 2025-03-30

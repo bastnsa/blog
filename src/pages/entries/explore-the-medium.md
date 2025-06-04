@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Entry.astro"
+layout: "../../layouts/Content.astro"
 title: "Explore the Medium"
 topic: "Medium"
 date: 2025-03-16

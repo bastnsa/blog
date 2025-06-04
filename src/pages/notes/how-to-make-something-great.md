@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Note.astro"
+layout: "../../layouts/Content.astro"
 title: "How to Make Something Great"
 topic: "Development"
 date: 2025-03-05

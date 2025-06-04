@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Entry.astro"
+layout: "../../layouts/Content.astro"
 title: "Transparent Interfaces"
 topic: "Interfaces"
 date: 2025-04-06

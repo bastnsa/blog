@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Note.astro"
+layout: "../../layouts/Content.astro"
 title: "Boundaries of Expression"
 topic: "Philosophy"
 date: 2025-03-28

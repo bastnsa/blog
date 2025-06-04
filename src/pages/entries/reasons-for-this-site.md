@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Entry.astro"
+layout: "../../layouts/Content.astro"
 title: "Reasons For This Site"
 topic: "Personal"
 date: 2025-03-02

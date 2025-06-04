@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Note.astro"
+layout: "../../layouts/Content.astro"
 title: "Notice Anomalies"
 topic: "Ideas"
 date: 2025-03-15
