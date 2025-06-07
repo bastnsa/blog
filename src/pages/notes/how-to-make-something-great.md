@@ -2,7 +2,7 @@
 layout: "../../layouts/Content.astro"
 title: "How to Make Something Great"
 topic: "Development"
-date: 2025-03-05
+pubDate: 2025-03-05
 ---
 
 Some personal takeaways from [_How to make something great_](https://ryolu.notion.site/how-to-make-something-great) by [Ryo Lu](https://x.com/ryolu_)

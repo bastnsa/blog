@@ -2,7 +2,7 @@
 layout: "../../layouts/Content.astro"
 title: "Doing With Images Makes Symbols"
 topic: "Interfaces"
-date: 2025-03-30
+pubDate: 2025-03-30
 ---
 
 Excerpts from [_User Interface: A Personal View_](https://tinlizzie.org/VPRIPapers/hc_user_interface.pdf) by [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay)

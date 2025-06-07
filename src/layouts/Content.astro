@@ -3,7 +3,7 @@ import Base from "./Base.astro";
 import { formatDate } from "../utils/dates.ts";
 
 const { frontmatter } = Astro.props;
-const date = formatDate(frontmatter.date.toString());
+const pubDate = formatDate(frontmatter.pubDate.toString());
 ---
 
 <Base title={frontmatter.title}>
@@ -11,7 +11,7 @@ const date = formatDate(frontmatter.date.toString());
     <article>
       <header>
         <h1>{frontmatter.title}</h1>
-        <span class="subtitle">{`${date} - ${frontmatter.topic}`}</span>
+        <span class="subtitle">{`${pubDate} - ${frontmatter.topic}`}</span>
       </header>
       <main>
         <div class="markdown__content">

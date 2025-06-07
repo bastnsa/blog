@@ -2,7 +2,7 @@
 layout: "../../layouts/Content.astro"
 title: "Connecting Apps"
 topic: "Malleable Software"
-date: 2025-04-27
+pubDate: 2025-04-27
 ---
 
 ## A Brief Thought

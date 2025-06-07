@@ -2,7 +2,7 @@
 layout: "../../layouts/Content.astro"
 title: "Transparent Interfaces"
 topic: "Interfaces"
-date: 2025-04-06
+pubDate: 2025-04-06
 ---
 
 Hiding system mechanics behind simplified abstractions creates a ceiling on user capability. Interfaces that expose their underlying logic enable a journey from novice to expert that "convenient" designs inadvertently prevent.

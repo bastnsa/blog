@@ -21,7 +21,7 @@ const notes = Object.values(import.meta.glob("./notes/*.md", { eager: true }));
             <Note
               title={note.frontmatter.title}
               topic={note.frontmatter.topic}
-              date={note.frontmatter.date}
+              pubDate={note.frontmatter.pubDate}
             >
               <Fragment set:html={note.compiledContent()} />
             </Note>

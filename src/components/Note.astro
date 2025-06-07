@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 import { formatDate } from "../utils/dates.ts";
 import readIcon from "../assets/read.svg";
 
-const { title, topic, date } = Astro.props;
-const formattedDate = formatDate(date.toString());
+const { title, topic, pubDate } = Astro.props;
+const formattedDate = formatDate(pubDate.toString());
 ---
 
 <div class="note-wrapper">

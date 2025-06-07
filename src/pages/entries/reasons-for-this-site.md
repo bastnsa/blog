@@ -2,7 +2,7 @@
 layout: "../../layouts/Content.astro"
 title: "Reasons For This Site"
 topic: "Personal"
-date: 2025-03-02
+pubDate: 2025-03-02
 ---
 
 Why did I create this site? I can think of many, but the following reasons stand out to me the most: interest, reference, and exposure.

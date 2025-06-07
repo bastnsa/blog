@@ -2,7 +2,7 @@
 layout: "../../layouts/Content.astro"
 title: "Explore the Medium"
 topic: "Medium"
-date: 2025-03-16
+pubDate: 2025-03-16
 ---
 
 **Question:** What can the medium teach you?

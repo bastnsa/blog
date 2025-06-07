@@ -6,10 +6,10 @@ import { formatDate } from "../utils/dates.ts";
 interface Frontmatter {
   title: string;
   topic: string;
-  date: string;
+  pubDate: string;
 }
 
-interface Entry {
+export interface Entry {
   frontmatter: Frontmatter;
   url: string;
 }
@@ -21,11 +21,11 @@ interface Note {
 
 const entries = import.meta.glob("./entries/*.md", { eager: true });
 const entry: Entry = Object.values(entries).sort(sortByDate)[0] as Entry;
-const entryDate = formatDate(entry.frontmatter.date.toString());
+const entryDate = formatDate(entry.frontmatter.pubDate.toString());
 
 const notes = import.meta.glob("./notes/*.md", { eager: true });
 const note: Note = Object.values(notes).sort(sortByDate)[0] as Note;
-const noteDate = formatDate(note.frontmatter.date.toString());
+const noteDate = formatDate(note.frontmatter.pubDate.toString());
 ---
 
 <Base>

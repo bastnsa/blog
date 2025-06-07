@@ -22,7 +22,7 @@ export function formatDate(dateString: string) {
 }
 
 export function sortByDate(entryA, entryB) {
-  const dateA = new Date(entryA.frontmatter.date);
-  const dateB = new Date(entryB.frontmatter.date);
+  const dateA = new Date(entryA.frontmatter.pubDate);
+  const dateB = new Date(entryB.frontmatter.pubDate);
   return dateB.getTime() - dateA.getTime();
 }
