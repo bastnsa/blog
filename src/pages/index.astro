@@ -1,30 +1,14 @@
 ---
 import Base from "../layouts/Base.astro";
-import { sortByDate } from "../utils/dates.ts";
-import { formatDate } from "../utils/dates.ts";
+import { formatDate } from "../utils/date.ts";
+import { getLatestContent } from "../utils/content";
 
-interface Frontmatter {
-  title: string;
-  topic: string;
-  pubDate: string;
-}
-
-export interface Entry {
-  frontmatter: Frontmatter;
-  url: string;
-}
-
-interface Note {
-  frontmatter: Frontmatter;
-  url: string;
-}
-
-const entries = import.meta.glob("./entries/*.md", { eager: true });
-const entry: Entry = Object.values(entries).sort(sortByDate)[0] as Entry;
+const entriesObj = import.meta.glob("./entries/*.md", { eager: true });
+const entry = getLatestContent(entriesObj);
 const entryDate = formatDate(entry.frontmatter.pubDate.toString());
 
-const notes = import.meta.glob("./notes/*.md", { eager: true });
-const note: Note = Object.values(notes).sort(sortByDate)[0] as Note;
+const notesObj = import.meta.glob("./notes/*.md", { eager: true });
+const note = getLatestContent(notesObj);
 const noteDate = formatDate(note.frontmatter.pubDate.toString());
 ---
 

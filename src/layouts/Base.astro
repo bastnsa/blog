@@ -5,8 +5,9 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "@fontsource-variable/inter";
 import interLatinWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import type { Frontmatter } from "../utils/types.ts";
 
-const { title } = Astro.props;
+const { title } = Astro.props as Frontmatter;
 ---
 
 <!doctype html>

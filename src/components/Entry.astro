@@ -1,10 +1,12 @@
 ---
-const { title, topic, url } = Astro.props;
+import type { Frontmatter } from "../utils/types";
+
+const frontmatter = Astro.props as Frontmatter & { url: string };
 ---
 
 <div class="entry">
-  <a href={url} class="entry__link flex-row">
-    <span class="entry__title">{title}</span>
-    <span class="entry__topic">{topic}</span>
+  <a href={frontmatter.url} class="entry__link flex-row">
+    <span class="entry__title">{frontmatter.title}</span>
+    <span class="entry__topic">{frontmatter.topic}</span>
   </a>
 </div>

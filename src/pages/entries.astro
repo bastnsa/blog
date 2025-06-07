@@ -1,13 +1,13 @@
 ---
 import Base from "../layouts/Base.astro";
 import Entry from "../components/Entry.astro";
-import { sortByDate } from "../utils/dates.ts";
+import { getContent } from "../utils/content";
+import { sortByDate } from "../utils/date.ts";
 
 const title = "Entries";
 const subtitle = "I write every day, but publish only ever so often.";
-const entries = Object.values(
-  import.meta.glob("./entries/*.md", { eager: true }),
-);
+const entriesObj = import.meta.glob("./entries/*.md", { eager: true });
+const entries = getContent(entriesObj);
 ---
 
 <Base title={title}>
@@ -21,7 +21,7 @@ const entries = Object.values(
         {
           entries
             .sort(sortByDate)
-            .map((entry: any) => (
+            .map((entry) => (
               <Entry
                 title={entry.frontmatter.title}
                 topic={entry.frontmatter.topic}

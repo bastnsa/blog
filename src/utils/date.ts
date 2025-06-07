@@ -1,3 +1,5 @@
+import type { Content } from "./types.ts";
+
 export function formatDate(dateString: string) {
   const monthNames = [
     "January",
@@ -21,8 +23,8 @@ export function formatDate(dateString: string) {
   return `${monthName} ${dayNum}, ${year}`;
 }
 
-export function sortByDate(entryA, entryB) {
-  const dateA = new Date(entryA.frontmatter.pubDate);
-  const dateB = new Date(entryB.frontmatter.pubDate);
+export function sortByDate(contentA: Content, contentB: Content) {
+  const dateA = new Date(contentA.frontmatter.pubDate);
+  const dateB = new Date(contentB.frontmatter.pubDate);
   return dateB.getTime() - dateA.getTime();
 }

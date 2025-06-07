@@ -1,8 +1,9 @@
 ---
 import Base from "./Base.astro";
-import { formatDate } from "../utils/dates.ts";
+import { formatDate } from "../utils/date.ts";
+import type { Content } from "../utils/types.ts";
 
-const { frontmatter } = Astro.props;
+const { frontmatter } = Astro.props as Content;
 const pubDate = formatDate(frontmatter.pubDate.toString());
 ---
 

@@ -1,20 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import { formatDate } from "../utils/dates.ts";
+import { formatDate } from "../utils/date.ts";
 import readIcon from "../assets/read.svg";
+import type { Frontmatter } from "../utils/types";
 
-const { title, topic, pubDate, url } = Astro.props;
-const formattedDate = formatDate(pubDate.toString());
+const frontmatter = Astro.props as Frontmatter & { url: string };
+const pubDate = formatDate(frontmatter.pubDate.toString());
 ---
 
 <div class="note-wrapper">
   <div class="note">
     <div class="flex-row">
-      <span>{`${formattedDate} - ${topic}`}</span>
-      <a
-        href={url}
-        class="note__link"
-      >
+      <span>{`${pubDate} - ${frontmatter.topic}`}</span>
+      <a href={frontmatter.url} class="note__link">
         <Image
           class="note__icon"
           src={readIcon}
@@ -25,7 +23,7 @@ const formattedDate = formatDate(pubDate.toString());
         />
       </a>
     </div>
-    <h2>{title}</h2>
+    <h2>{frontmatter.title}</h2>
     <div class="markdown__content">
       <slot />
     </div>
