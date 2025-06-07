@@ -3,6 +3,7 @@ layout: "../../layouts/Content.astro"
 title: "Explore the Medium"
 topic: "Medium"
 pubDate: 2025-03-16
+description: "How aspects and perspectives reveal hidden insights that transcend the original context."
 ---
 
 **Question:** What can the medium teach you?

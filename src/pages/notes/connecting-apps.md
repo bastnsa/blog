@@ -3,6 +3,7 @@ layout: "../../layouts/Content.astro"
 title: "Connecting Apps"
 topic: "Malleable Software"
 pubDate: 2025-04-27
+description: "A broader paradigm that can be generalized across many modern applications."
 ---
 
 ## A Brief Thought

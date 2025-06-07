@@ -3,6 +3,7 @@ layout: "../../layouts/Content.astro"
 title: "Transparent Interfaces"
 topic: "Interfaces"
 pubDate: 2025-04-06
+description: "Transparent systems empower users, enable creativity, and democratize capabilities."
 ---
 
 Hiding system mechanics behind simplified abstractions creates a ceiling on user capability. Interfaces that expose their underlying logic enable a journey from novice to expert that "convenient" designs inadvertently prevent.

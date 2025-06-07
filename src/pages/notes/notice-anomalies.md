@@ -3,6 +3,7 @@ layout: "../../layouts/Content.astro"
 title: "Notice Anomalies"
 topic: "Ideas"
 pubDate: 2025-03-15
+description: "An excerpt from 'How to Get New Ideas' by Paul Graham"
 ---
 
 An excerpt from [_How to Get New Ideas_](https://paulgraham.com/getideas.html) by [Paul Graham](https://x.com/paulg)
